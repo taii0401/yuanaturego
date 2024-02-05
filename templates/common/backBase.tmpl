@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="bjjQK3EQcbaHnoRNBSP0-vWAq6gRoCm1azM2XdV0z8s" />
+    <meta name="keywords" content="原生學,Pure Nature,消除腳臭,廣志足白浴露,原生,肌膚,純淨,自然,保養,回復,足白,清爽">
+    <meta name="description" content="消除腳臭的根源、紓緩生活緊張的情緒，健康生活從深層的足部浸泡開始。肌膚的水分及油脂的平衡打造更健康的膚質，利用「深層潔淨」解決膚質所帶來的問題，回復原生肌膚般的舒適感受，潔淨的生活體驗，從腳開始。">
+    <title>原生學 Pure Nature{{ .title_txt }}</title>
+    <!-- font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- 模版 -->
+    <link rel="stylesheet" href="/static/css/tooplate.css">
+    <!-- 日期 -->
+    <link rel="stylesheet" href="/static/css/bootstrap-datepicker.css">
+    {{ block "css" . }}{{ end }}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y080K8RF87"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y080K8RF87');
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header-outs">
+        <div class="head-wl">
+            <div class="search-w3ls">
+            
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="div_navbar">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-light" style="margin-top:0px;min-height:80px;">
+                    <a class="navbar-brand" href="/admin">
+                        <img src="/static/img/icons/logo.png" height="80px">
+                        <h6 class="tm-site-title mb-0">後台 - {{ .title_txt }}
+                        </h6>
+                    </a>    
+                    <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">後台管理</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                                    <a class="dropdown-item" href="/admin/list">管理員管理</a>
+                                    <a class="dropdown-item" href="/admin/coupon">折價劵管理</a>
+                                    <a class="dropdown-item" href="/admin/feedback">使用者回饋</a>
+                                    <a class="dropdown-item" href="/admin/contact">聯絡我們</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">會員管理</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/admin/user">會員資料</a>
+                                    <a class="dropdown-item" href="/admin/user/coupon">會員折價劵</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/orders">訂單管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        {{ block "back_content" . }}{{ end }}
+    </div>
+    
+    <!-- footer -->
+    <footer class="row" style="min-height:100px;">
+        <div class="col-12">
+            <div class="row" style="margin: 15px 5% 0px 5%;">
+                <div class="footer_menu col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                    <span class="footer_title">購物指南</span>
+                    <ul>
+                        <li><a href="/">購物須知</a></li>
+                        <li><a href="/">運送政策</a></li>
+                        <li><a href="/">退換貨政策</a></li>
+                        <li><a href="/">隱私權政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer_menu col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                    <span class="footer_title">常見問題</span>
+                    <ul>
+                        <li><a href="/">購物問題</a></li>
+                        <li><a href="/">產品問題</a></li>
+                        <li><a href="/">會員問題</a></li>
+                    </ul>
+                </div>
+                <div class="footer_menu col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                    <span class="footer_title">
+                        <a href="/">聯絡我們</a>
+                    </span>
+                    <ul>
+                        <li>客服專線：07-9721992</li>
+                        <li>客服信箱：Service@yuanture.tw</li>
+                        <li>服務時段：周一至周五 9:00 ~ 18:00</li>
+                    </ul>
+                </div>
+                <div class="footer_menu col-xl-2 col-lg-2 col-md-2 col-sm-3">
+                    <span class="footer_title">社群追蹤</span>
+                    <ul>
+                        <li>Facebook
+                            <a href="https://www.facebook.com/yuanature.tw" target="_blank">
+                                <img src="/static/img/icons/fb_grey.png" height="30px">
+                            </a>
+                        </li>
+                        <li>Instagram
+                            <a href="https://www.instagram.com/yuanature" target="_blank">
+                                <img src="/static/img/icons/ig_grey.png" height="30px">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_menu col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                    <span class="footer_title">
+                        <a href="/">使用者回饋</a>
+                    </span>
+                    <ul>
+                        <li>TERMS OF SERVICE</li>
+                        <li>Copyright © 原生學. All rights reserved.</li>
+                        <li>白羊作坊 | 統編 91941522</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    //console.log(window.navigator);
+    if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        //alert('phone');
+    } else {
+        //alert('computer');
+    }
+</script>
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/common.js"></script>
+<!-- 日期 -->
+<script src="/static/js/bootstrap-datepicker.min.js"></script>
+<script src="/static/js/bootstrap-datepicker.zh-TW.min.js"></script>
+<!-- 郵遞區號 -->
+<script src="/static/js/twzipcode.js"></script>
+<script src="/static/js/twzipcode.min.js"></script>
+{{ block "script" . }}{{ end }}
+</html>

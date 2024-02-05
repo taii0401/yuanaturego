@@ -1,0 +1,36 @@
+{{ define "banner_menu_txt" }} {{ .title_txt }} {{ end }}
+{{ define "content" }}
+<div class="row tm-mt-big">
+    <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+        <div class="bg-white tm-block">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="mt-3">{{ .title_txt }}</h5>
+                </div>
+            </div>
+            <div class="table-responsive">
+                @include('tables.orderCart')
+
+                <form id="form_data_cart_order" class="tm-signup-form" method="post">
+                    <input type="hidden" id="action_type" name="action_type" value="cart_order">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+                            <span style="font-size: smaller;color:red;">
+                                台灣本島：滿1500免運費，宅配：100元，超商取貨：70元<br>
+                                台灣離島：滿2000免運費，宅配：150元，超商取貨：110元
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row input-group mt-3">
+                <div class="col-12 tm-btn-right" style="display:{{ .cart_display }};">
+                    <button type="button" class="btn btn-primary" onclick="changeForm('/product')">繼續購買</button>
+                        <button type="button" class="btn btn-danger" onclick="cartSubmit('cart_order');">下一步</button>
+                        <button type="button" class="btn btn-danger" onclick="alert('請先登入會員！');changeForm('/users')">下一步</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
