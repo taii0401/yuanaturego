@@ -30,19 +30,19 @@ func (ProductModel) TableName() string {
 	return "product"
 }
 
-// 依訂單UUID取得資料
+// 依UUID取得資料
 func (model_data ProductModel) GetDataByUuid() map[string]interface{} {
 	database.Db.Where("deleted_at IS NULL").Find(&model_data, ProductModel{
 		Uuid: model_data.Uuid,
 	}).Rows()
 
-	//轉換map
+	//轉換資料
 	data := model_data.changeFieldName()
 
 	return data
 }
 
-// 轉換map
+// 轉換資料
 func (model_data ProductModel) changeFieldName() map[string]interface{} {
 	data := make(map[string]interface{})
 	//取得欄位名稱
