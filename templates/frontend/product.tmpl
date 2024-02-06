@@ -1,7 +1,7 @@
 {{ define "banner_menu_txt" }} {{ .title_txt }} {{ end }}
 {{ define "content" }}
 <div class="row">
-    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 mx-auto">
+    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 mx-auto">
         <div class="row tm-block">
             <div id="msg_error" class="col-12 alert alert-danger" role="alert" style="display:none;"></div>
             <div id="msg_success" class="col-12 alert alert-success" role="alert" style="display:none;"></div>
@@ -74,6 +74,9 @@
                     <!-- tab內容 -->
                     <div class="tab-inner-wrap" style="margin-top:-18px;">
                         <div id="one" class="tab-inner">
+                            <iframe width="100%" height="400"
+                                src="https://www.youtube.com/embed/3QwHq64zlYo?si=IwhI07FjOf6GDXI6&autoplay=1&mute=1">
+                            </iframe>
                             {{ range .img }}
                             <img src="static/img/product/product_detail_{{ . }}.jpg" width="100%">
                             {{ end }}

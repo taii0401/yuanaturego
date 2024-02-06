@@ -36,3 +36,52 @@ func Product(context *gin.Context) {
 	data["img"] = img
 	context.HTML(http.StatusOK, "product.tmpl", data)
 }
+
+// 購物須知
+func Shopping(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "購物須知"
+	context.HTML(http.StatusOK, "shopping.tmpl", data)
+}
+
+// 運送政策
+func Shipment(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "運送政策"
+	context.HTML(http.StatusOK, "shipment.tmpl", data)
+}
+
+// 退換貨政策
+func Refunds(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "退換貨政策"
+	context.HTML(http.StatusOK, "refunds.tmpl", data)
+}
+
+// 隱私權政策
+func Privacy(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "隱私權政策"
+	context.HTML(http.StatusOK, "privacy.tmpl", data)
+}
+
+// 購物問題
+func QaShopping(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "購物問題"
+	context.HTML(http.StatusOK, "qa_shopping.tmpl", data)
+}
+
+// 產品問題
+func QaProduct(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "產品問題"
+	context.HTML(http.StatusOK, "qa_product.tmpl", data)
+}
+
+// 會員問題
+func QaMember(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "會員問題"
+	context.HTML(http.StatusOK, "qa_member.tmpl", data)
+}
