@@ -2,6 +2,7 @@ package frontend
 
 import (
 	"net/http"
+	handlers "yuanaturego/handlers"
 	models "yuanaturego/models"
 
 	"github.com/gin-gonic/gin"
@@ -84,4 +85,15 @@ func QaMember(context *gin.Context) {
 	data := make(map[string]interface{})
 	data["title_txt"] = "會員問題"
 	context.HTML(http.StatusOK, "qa_member.tmpl", data)
+}
+
+//使用者回饋
+
+// 聯絡我們
+func Contact(context *gin.Context) {
+	data := make(map[string]interface{})
+	data["title_txt"] = "聯絡我們"
+	//選項-聯絡我們類型
+	data["contact_type"] = handlers.GetConfigOptions("contact_type", true)
+	context.HTML(http.StatusOK, "contact.tmpl", data)
 }

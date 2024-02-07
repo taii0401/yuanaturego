@@ -32,7 +32,7 @@ func InitRouter() *gin.Engine {
 	//router.GET("/feedback", handlers.Feedback)
 	//router.GET("/feedback_detail", handlers.FeedbackDetail)
 	//聯絡我們
-	//router.GET("/contact", handlers.Contact)
+	router.GET("/contact", handlers.Contact)
 
 	//訂單
 	/*ordersRouter := router.Group("/orders")
@@ -46,13 +46,13 @@ func InitRouter() *gin.Engine {
 	{
 		//首頁
 		adminRouter.GET("/", handlersAdmin.Index)
-	}
+	}*/
 
 	//AJAX
 	ajaxRouter := router.Group("/ajax")
 	{
-		ajaxRouter.POST("/cart_data", handlers.AjaxCart)
-	}*/
+		ajaxRouter.POST("/contact_data", handlers.AjaxContactData)
+	}
 
 	return router
 }
