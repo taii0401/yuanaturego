@@ -94,6 +94,6 @@ func Contact(context *gin.Context) {
 	data := make(map[string]interface{})
 	data["title_txt"] = "聯絡我們"
 	//選項-聯絡我們類型
-	data["contact_type"] = handlers.GetConfigOptions("contact_type", true)
+	data["contact_type"] = handlers.GetConfigOptions("contact_type", false)
 	context.HTML(http.StatusOK, "contact.tmpl", data)
 }

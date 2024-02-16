@@ -9,10 +9,10 @@ import (
 type ContactModel struct {
 	Id        uint      `gorm:"column:id;primaryKey;autoIncrement;not null;"`
 	Uuid      string    `gorm:"column:uuid;unique;type:uuid;default:uuid_generate_v4()"`
-	Name      string    `gorm:"column:name" form:"name"`
-	Phone     string    `gorm:"column:phone" form:"phone"`
+	Name      string    `gorm:"column:name" form:"name" binding:"required"`
+	Phone     string    `gorm:"column:phone" form:"phone" binding:"required"`
 	Email     string    `gorm:"column:email" form:"email"`
-	Type      string    `gorm:"column:type;default:null" form:"type"`
+	Type      string    `gorm:"column:type;" form:"type"`
 	Status    string    `gorm:"column:status;default:handle" form:"status"`
 	Content   string    `gorm:"column:content;default:null" form:"content"`
 	Reply     string    `gorm:"column:reply;default:null" form:"reply"`
